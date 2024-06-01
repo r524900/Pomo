@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pomodoro Timer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+  <div class="container">
+    <h1 class="title">
+    Pomedoro Timer
+    </h1>
+    <div class="settings">
+      <label for="workTime">Work Time (min):</label>
+      <input type="number" id="workTime" min="1" max="60" value="25">
+
+      <label for="breakTime">Break Time (min):</label>
+      <input type="number" id="breakTime" min="1" max="30" value="5">
+
+      <label for="numberOfBreaks">Number of Pomodoros:</label>
+      <input type="number" id="numberOfBreaks" min="1" max="10" value="4">
+    </div>
+
+    <div class="display">
+      <div class="mode-toggle">
+        <input type="checkbox" id="modeToggle">
+        <label for="modeToggle">Dark Mode</label>
+      </div>
+      <div class="timer">
+        <span id="time-left">25:00</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="btn" id="start">Start</button>
+      <button class="btn" id="pause">Pause</button>
+      <button class="btn" id="skip">Skip</button>
+      <button class="btn" id="reset">Reset</button>
+    </div>
+
+    <div class="stats">
+      <p>Pomodoros Completed: <span id="pomodorosCompleted">0</span></p>
+      <p>Total Time Worked: <span id="totalTimeWorked">0</span> minutes</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
